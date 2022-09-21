@@ -1,0 +1,1395 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "antipasto";
+  src: url(../assets/Fonts/Anti-ExtraBold.ttf);
+  font-style: normal;
+  font-weight: 800;
+}
+@font-face {
+  font-family: "antipasto";
+  src: url(../assets/Fonts/Anti-Bold.ttf);
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "antipasto";
+  src: url(../assets/Fonts/Anti-Medium.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "antipasto";
+  src: url(../assets/Fonts/Anti-Regular.ttf);
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "antipasto";
+  src: url(../assets/Fonts/Anti-Light.ttf);
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: "antipasto";
+  src: url(../assets/Fonts/Anti-Thin.ttf);
+  font-style: normal;
+  font-weight: 100;
+}
+:root {
+  --color-primario:rgb(242, 139, 67);
+  --color-secundario:rgb(52, 22, 20);
+}
+
+/*         PARA USAR ESTA FUENTE DESCARGADA EN CUALQUIER ETIQUETA O CLASE O ID SE HACE DE LA SIGUIENTE MANERA:
+      p{
+          font-family: 'antipasto';
+          font-weight: 200; podes elgir 100,200,300,400,700,800 como está arriba
+      } */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* TODOS LOS TITULOS LLEVAN ESTA TIPOGRAFIA POR ENDE CADA VEZ QUE HAYA UN TITULO PONERLE LA CLASE "TITULO" ASI AUTOMATICAMENTE TOMA ESA TIPOGRAFIA */
+.titulo {
+  font-family: "Alata", sans-serif;
+  margin-top: 4em;
+  margin-bottom: 2em;
+}
+
+/* TIPOGRFIA ROBOTO SOLO PARA EL MENU DE NAVEGACION */
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: var(--color-primario);
+}
+
+/* NAVBAR */
+.barra {
+  z-index: 100;
+  padding: 10px 10px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  box-shadow: 0px 0px 5px 2px rgba(121, 121, 121, 0.269);
+  background-color: var(--color-secundario);
+}
+
+nav .enlaceLogo img {
+  width: 250px;
+  margin-left: 120px;
+}
+
+nav #navbarSupportedContent ul li .nav-link {
+  color: var(--color-primario);
+  margin: 0px 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+nav #navbarSupportedContent ul li .nav-link:hover {
+  color: #722F72;
+  margin: 0px 10px;
+}
+
+nav .navbar-toggler {
+  border: none;
+}
+
+nav .navbar-toggler:focus {
+  border: none;
+  outline: none;
+}
+
+#barraUno {
+  width: 30px;
+  height: 2px;
+  background-color: #1ff70b;
+  margin: 8px 0px;
+  border: none;
+}
+
+#barraDos {
+  width: 30px;
+  height: 2px;
+  background-color: #722F72;
+  margin: 8px 0px;
+  border: none;
+}
+
+#barraTres {
+  width: 30px;
+  height: 2px;
+  background-color: #722F72;
+  margin: 8px 0px;
+  border: none;
+}
+
+/* BANNER */
+#banner {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../assets/asado1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 90%;
+  background-position-y: 75%;
+  padding: 15px;
+}
+
+#banner h1 {
+  color: #341614;
+  padding-left: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: bold;
+  font-size: 58px;
+}
+
+#jumbo {
+  display: block;
+  grid-template-columns: 60% 40%;
+  position: relative;
+  top: 8%;
+  padding: 5px;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: flex-end;
+}
+
+#botonIndex {
+  width: 18%;
+  background-color: var(--color-primario);
+  border-radius: 25px;
+  text-decoration: none;
+  color: #341614;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 10px 20px 10px 10px;
+  position: absolute;
+  text-align: center;
+  top: 75%;
+  left: 10%;
+}
+
+#botonIndex a {
+  color: #341614;
+}
+
+/*NAV*/
+nav {
+  position: fixed;
+  width: 100%;
+  top: 5em;
+  z-index: 9999;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+}
+
+nav ul li a {
+  text-transform: uppercase;
+  color: #242323;
+  font-weight: bold;
+  margin-right: 0.4em;
+  letter-spacing: -1px;
+}
+
+nav ul li a:hover {
+  color: #807A6E;
+  text-decoration: none;
+}
+
+i {
+  color: #000;
+  margin: -5px;
+}
+
+.miau {
+  background: red;
+}
+
+/*MAIN*/
+.main {
+  background-color: #F9DB79;
+  color: #fff;
+}
+
+.main h1 {
+  font-family: "Pacifico", cursive;
+  font-style: italic;
+  color: #000000;
+}
+
+p span {
+  display: block;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+span[class=helado] {
+  font-size: 5.5em;
+}
+
+/*SABORES*/
+.chocolate {
+  background-image: url("https://static.wixstatic.com/media/baac51_dce92e80d8174b64b0505698a8444b3d.jpg/v1/fill/w_1539,h_651,al_c,q_85,usm_0.66_1.00_0.01/baac51_dce92e80d8174b64b0505698a8444b3d.webp");
+  background-position: top center;
+  height: 500px;
+}
+
+.sabores h2,
+.lugar h2 {
+  text-transform: uppercase;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+.sabores h3,
+.lugar h3 {
+  font-family: Yesteryear;
+  font-size: 1.9em;
+}
+
+.sabores p,
+.lugar p {
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 1.2em;
+  margin: 2em;
+}
+
+.sabores a,
+.lactosa a,
+.lugar a,
+.eventos a {
+  padding: 0.3em 2.2em;
+  color: #484747;
+  border: 2px solid #484747;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 1.6em;
+  transition: all 1s;
+  display: inline-block;
+  margin: 1em;
+}
+
+.sabores a:hover,
+.lactosa a:hover,
+.eventos a:hover,
+.lugar a:hover {
+  color: #fff;
+  background: #484747;
+  text-decoration: none;
+}
+
+/*LACTOSA*/
+.lactosa {
+  background: url("http://pngimg.com/uploads/ice_cream/ice_cream_PNG20992.png") bottom center no-repeat, var(--color-secundario);
+  background-attachment: fixed;
+  text-transform: uppercase;
+  height: 500px;
+  color: var(--color-primario);
+  padding-top: 3em;
+}
+
+.lactosa p,
+.eventos p {
+  font-size: 4em;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.5em;
+}
+
+.lactosa a,
+.eventos a {
+  color: var(--color-primario);
+  border: 2px solid var(--color-primario);
+}
+
+.lactosa a:hover {
+  background: #fff;
+  color: #484747;
+}
+
+/*Lugares*/
+.mapa {
+  border-radius: 100%;
+  padding: 5px;
+}
+
+/*EVENTOS*/
+.eventos {
+  background: url("https://cdn.vox-cdn.com/thumbor/qSDqz4aMxBl17Of-tieHqF30pTs=/309x0:3968x2744/1200x900/filters:focal(309x0:3968x2744)/cdn.vox-cdn.com/uploads/chorus_image/image/51506479/SweetRitual2.0.0.jpg") bottom center no-repeat;
+  background-attachment: fixed;
+  text-transform: uppercase;
+  height: 500px;
+  color: #fff;
+  padding-top: 3em;
+  background-size: cover;
+  background-position: top left;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+/* DESDE AQUI EMPIEZA LA SECCIÓN DEL CARRITO */
+.tabla-calculo {
+  display: flex;
+  justify-content: center;
+}
+
+.tabla {
+  width: 80%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  color: white;
+  margin-bottom: 2rem;
+  empty-cells: hide;
+  border-radius: 10px;
+}
+
+.titulo-tabla {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.border-top-left {
+  border-top-left-radius: 10px;
+}
+
+.border-top-right {
+  border-top-right-radius: 10px;
+}
+
+.border-bottom-right {
+  border-bottom-right-radius: 10px;
+}
+
+.border-bottom-left {
+  border-bottom-left-radius: 10px;
+}
+
+th {
+  font-size: 1.1rem;
+  background: hsla(210deg, 60%, 70%, 0.7);
+}
+
+th,
+td,
+tr {
+  border: var(--border-table);
+  text-align: center;
+  padding: 0.4rem 0;
+}
+
+td {
+  background: hsla(210deg, 40%, 90%, 0.9);
+  color: black;
+}
+
+.precio-tabla::before {
+  content: "US$";
+  padding-right: 0.4rem;
+}
+
+.button {
+  margin: 0 0.4rem;
+  border: var(--border-table);
+  background: hsla(250deg, 70%, 50%, 0.7);
+  color: white;
+  cursor: pointer;
+}
+
+.negrita {
+  font-weight: bold;
+}
+
+.none {
+  background: transparent;
+  border: none;
+}
+
+/* DESDE AQUI EMPIEZA LA SECCIÓN DE LOS PRODUCTOS */
+.cartola {
+  height: 300px;
+  width: 230px;
+  border-radius: 0.35rem;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0px 0px 1rem hsla(240deg, 100%, 90%, 0.3);
+  transition: transform 0.1s;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+.cartola:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+  box-shadow: 0 0 2rem hsla(240deg, 100%, 90%, 0.5);
+}
+
+/* Imagen */
+.contenedor-img {
+  border-end-start-radius: 0.35rem;
+  height: 127px;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+/* Nombre y descripción del producto */
+.div-info {
+  flex: 1;
+  border-bottom: var(--border);
+  overflow: hidden;
+}
+
+.nombre-prod {
+  margin: 0;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0.2rem 0;
+}
+
+.separador {
+  width: 80%;
+  margin: 0.2rem auto;
+  border: none;
+  border-top: var(--border);
+}
+
+.descripcion-prod {
+  margin: 0;
+  font-size: 0.9rem;
+  padding: 0.2rem 1rem;
+  overflow: hidden;
+  opacity: 0.7;
+}
+
+/* Precio y Boton Carrito */
+.div-precio-boton {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5rem;
+}
+
+.precio {
+  margin: 0 0.5em;
+}
+
+.precio::before {
+  content: "US$";
+  padding-right: 0.3rem;
+}
+
+.boton {
+  background: hsla(210deg, 40%, 70%, 0.7);
+  cursor: pointer;
+  border: var(--border);
+  font-size: 1rem;
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 1px 1px 3px hsla(0deg, 100%, 0%, 0.15);
+}
+
+.boton:hover {
+  color: rgba(255, 255, 255, 0.8);
+  background: hsl(210deg, 40%, 50%);
+  box-shadow: 1px 1px 3px hsla(0deg, 100%, 0%, 0.25);
+}
+
+.boton::after {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+  background: url(https://cdn-icons-png.flaticon.com/512/1656/1656456.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.boton:hover::after {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+  background: url(https://cdn-icons-png.flaticon.com/512/1656/1656456.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.carrito {
+  width: 18px;
+}
+
+#servicios {
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  padding-bottom: 2.3em;
+}
+
+#footer-servicios {
+  background-color: var(--color-secundario);
+  padding: 60px 0 30px 0;
+  margin-top: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.contenedor-footer-servicios {
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--color-primario);
+}
+
+.contenedor-pie-servicios {
+  text-align: center;
+  color: white;
+}
+
+.contenedor-pie-servicios h4 {
+  text-align: center;
+  border-bottom: 3px solid #000000;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.contenedor-pie-servicios p {
+  color: rgb(215, 216, 224);
+}
+
+.Derechos-reservados-servcios {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0 0 0;
+  color: var(--color-primario);
+}
+
+.clase3 {
+  background-color: #1ff70b;
+}
+.clase3 p {
+  color: red;
+}
+.clase3 p h1 {
+  color: aqua;
+}
+
+/* Contenedor de todos los productos */
+.contenedor-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.contenedor {
+  background-image: url("http://www.walldevil.com/wallpapers/a77/pattern-tetris.jpg");
+  background-repeat: repeat;
+  background-size: 100%;
+  width: 970px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  padding: 30px;
+  box-shadow: 3px 3px 10px #000;
+}
+.contenedor label {
+  font-size: 1.5rem;
+}
+
+.main h2 {
+  font-family: "Patrick Hand", cursive;
+  color: #3d3236;
+  font-size: 3em;
+}
+
+/*FORM*/
+.main form {
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: left;
+  padding: 20px;
+  font-size: 1.3em;
+}
+
+/*input*/
+.cajas {
+  border-radius: 5px;
+  height: 22px;
+  margin: 15px 0;
+  background-color: #93BBBB;
+  border: 2px solid #fff;
+}
+
+.cajas:hover {
+  background-color: #A7C1C0;
+  border: 2px solid #000;
+  box-shadow: 3px 3px 6px #fff;
+}
+
+/*botón*/
+.btn {
+  height: 40px;
+  padding: 10px 40px;
+  border-radius: 7px;
+  background-color: #000;
+  color: #9ABCBD;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 0;
+}
+
+.btn:hover {
+  box-shadow: 3px 3px 5px #000;
+  background-color: #FE0069;
+  color: #000;
+}
+
+body {
+  font-family: sans-serif, Arial;
+}
+
+.contenedor {
+  padding: 60px 0;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+.contenedor h2 {
+  color: white;
+}
+
+.titulo {
+  color: #000000;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* HEADER */
+nav {
+  text-align: right;
+  padding: 30px 50px 0 0;
+}
+
+nav > a {
+  color: #000000;
+  font-weight: 300;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+nav > a:hover {
+  color: #000000;
+}
+
+.secciontexto {
+  display: flex;
+  height: 600px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.secciontexto h1 {
+  color: #000000;
+  font-size: 30px;
+}
+
+.secciontexto h2 {
+  color: rgba(44, 38, 59, 0.47);
+  font-size: 30px;
+}
+
+/* CONOCENOS */
+main .sec-conocenos {
+  padding: 30px 0 60px 0;
+}
+
+.sec-n {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.imagen-conocenos {
+  width: 50%;
+  padding: 15px;
+}
+
+.sec-conocenos .contenedor-conocenos {
+  width: 48%;
+}
+
+.contenedor-conocenos h3 {
+  margin-bottom: 15px;
+}
+
+.contenedor-conocenos h3 span {
+  background: var(--color-primario);
+  color: white;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  width: 5%;
+  height: 5%;
+  padding: 2px;
+  box-shadow: black;
+  margin-right: 10px;
+}
+
+.contenedor-conocenos p {
+  padding: 10px 10px 30px 15px;
+  font-weight: 300;
+  text-align: justify;
+}
+
+/* GALERIA */
+.sec-galeria {
+  background: var(--color-secundario);
+}
+
+.galeria-port {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.imagen-port {
+  width: 24%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+.imagen-port > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.hover-galeria {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: hsla(185deg, 91%, 27%, 0.7);
+  transition: transform 0.5s;
+  transform: scale(0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hover-galeria img {
+  width: 50px;
+}
+
+.hover-galeria p {
+  color: aliceblue;
+}
+
+.imagen-port:hover .hover-galeria {
+  transform: scale(1);
+}
+
+/* LOS MEJORES TACOS */
+.tarjetas {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.tarjetas .card {
+  background: var(--color-secundario);
+  display: flex;
+  width: 46%;
+  height: 200px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+}
+
+.tarjetas .card img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid white;
+  border-radius: 50%;
+  display: block;
+}
+
+.tarjetas .card > .contenido-texto-tarjeta {
+  width: 60%;
+  color: aliceblue;
+}
+
+.tarjetas .card > .contenido-texto-tarjeta p {
+  font-weight: 300;
+  padding-top: 5px;
+}
+
+/*PORQUE ELEGIRNOS */
+.help {
+  background: var(--color-secundario);
+  padding-bottom: 30px;
+}
+
+.contenedor-elegirnos {
+  display: flex;
+  flex-direction: columns;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.contenedor-help {
+  width: 20%;
+  text-align: center;
+}
+
+.contenedor-help img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contenedor-help h3 {
+  margin: 10px 0;
+}
+
+.contenedor-help p {
+  font-weight: 300;
+  box-sizing: justify;
+}
+
+/*FOOTER*/
+#footer {
+  background-color: var(--color-secundario);
+  padding: 60px 0 30px 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+.contenedor-footer {
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--color-primario);
+}
+
+.contenedor-pie {
+  text-align: center;
+  color: white;
+}
+
+.contenedor-pie h4 {
+  text-align: center;
+  border-bottom: 3px solid #000000;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.contenedor-pie p {
+  color: rgb(215, 216, 224);
+}
+
+.Derechos-reservados {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0 0 0;
+  color: var(--color-primario);
+}
+
+.clase3 {
+  background-color: #1ff70b;
+}
+.clase3 p {
+  color: red;
+}
+.clase3 p h1 {
+  color: aqua;
+}
+
+@media screen and (max-width: 1200px) {
+  #footer-servicios {
+    position: relative;
+  }
+  .contenedor-footer-servicios {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--color-primario);
+  }
+  .contenedor-pie-servicios {
+    text-align: center;
+    color: white;
+  }
+  .contenedor-pie-servicios h4 {
+    text-align: center;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .contenedor-pie-servicios p {
+    color: rgb(215, 216, 224);
+  }
+  .Derechos-reservados-servcios {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: var(--color-primario);
+  }
+}
+@media screen and (max-width: 992px) {
+  #footer-servicios {
+    position: relative;
+  }
+  .contenedor-footer-servicios {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--color-primario);
+  }
+  .contenedor-pie-servicios {
+    text-align: center;
+    color: white;
+  }
+  .contenedor-pie-servicios h4 {
+    text-align: center;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .contenedor-pie-servicios p {
+    color: rgb(215, 216, 224);
+  }
+  .Derechos-reservados-servcios {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: var(--color-primario);
+  }
+}
+@media only screen and (max-width: 798px) {
+  nav .enlaceLogo img {
+    width: 140px;
+    margin-left: 0px;
+  }
+  #botonIndex {
+    width: 80%;
+    background-color: var(--color-primario);
+    border-radius: 25px;
+    text-decoration: none;
+    color: #341614;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 20px 20px 10px 20px;
+    position: absolute;
+    text-align: center;
+    top: 75%;
+    left: 10%;
+  }
+  #footer-servicios {
+    position: relative;
+  }
+  .contenedor-footer-servicios {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--color-primario);
+  }
+  .contenedor-pie-servicios {
+    text-align: center;
+    color: white;
+  }
+  .contenedor-pie-servicios h4 {
+    text-align: center;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .contenedor-pie-servicios p {
+    color: rgb(215, 216, 224);
+  }
+  .Derechos-reservados-servcios {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: var(--color-primario);
+  }
+  #botonIndex a {
+    color: var(--color-secundario);
+  }
+  .row-item p {
+    display: flex;
+    color: rgb(28, 21, 21);
+    font-size: smaller;
+  }
+  .contenedor-conocenos h3 span {
+    background: #0cd7f2;
+    color: white;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 5%;
+    height: 5%;
+    padding: 2px;
+    box-shadow: black;
+    margin-right: 10px;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .parrafo {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .parrafo p {
+    color: white;
+    font-size: 1.5rem;
+  }
+  .contenedor {
+    background-image: url("http://www.walldevil.com/wallpapers/a77/pattern-tetris.jpg");
+    background-repeat: repeat;
+    background-size: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    box-shadow: 3px 3px 10px #000;
+  }
+  .contenedor label {
+    font-size: 1.5rem;
+    color: #000;
+  }
+}
+/* MEDIA QUERIES MOBILE */
+@media only screen and (max-width: 480px) {
+  /* NAVBAR */
+  .barra {
+    z-index: 100;
+    padding: 10px 10px;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    box-shadow: 0px 0px 5px 2px rgba(121, 121, 121, 0.269);
+    background-color: #341614;
+  }
+  nav .enlaceLogo img {
+    width: 250px;
+    margin-left: 80px;
+  }
+  nav #navbarSupportedContent ul li .nav-link {
+    color: var(--color-primario);
+    margin: 0px 10px;
+    transition: all 0.2s ease-in-out;
+  }
+  nav #navbarSupportedContent ul li .nav-link:hover {
+    color: #722F72;
+    margin: 0px 10px;
+  }
+  nav .navbar-toggler {
+    border: none;
+  }
+  nav .navbar-toggler:focus {
+    border: none;
+    outline: none;
+  }
+  #barraUno {
+    width: 30px;
+    height: 2px;
+    background-color: #1ff70b;
+    margin: 8px 0px;
+    border: none;
+  }
+  #barraDos {
+    width: 30px;
+    height: 2px;
+    background-color: #722F72;
+    margin: 8px 0px;
+    border: none;
+  }
+  #barraTres {
+    width: 30px;
+    height: 2px;
+    background-color: #722F72;
+    margin: 8px 0px;
+    border: none;
+  }
+  /* BANNER */
+  #banner {
+    height: 100vh;
+    background-image: url("../assets/asado1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 90%;
+    background-position-y: 75%;
+    padding: 15px;
+  }
+  #banner h1 {
+    color: #341614;
+    padding-left: 4px;
+    display: flex;
+    flex-direction: column-reverse;
+    font-weight: bold;
+    font-size: 28px;
+  }
+  #jumbo {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    position: relative;
+    top: 8%;
+    padding: 5px;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: flex-end;
+  }
+  .contenedor label {
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+  }
+  #botonIndex {
+    width: 40%;
+    background-color: var(--color-primario);
+    border-radius: 25px;
+    text-decoration: none;
+    color: #341614;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px 20px 10px 10px;
+    position: absolute;
+    text-align: center;
+    top: 75%;
+    left: 10%;
+  }
+  #botonIndex a {
+    color: var(--color-secundario);
+  }
+  /*NAV*/
+  nav {
+    position: fixed;
+    width: 100%;
+    top: 5em;
+    z-index: 9999;
+  }
+  nav ul li {
+    display: inline-block;
+    list-style: none;
+  }
+  nav ul li a {
+    text-transform: uppercase;
+    color: #242323;
+    font-weight: bold;
+    margin-right: 0.4em;
+    letter-spacing: -1px;
+  }
+  nav ul li a:hover {
+    color: #807A6E;
+    text-decoration: none;
+  }
+  i {
+    color: #000;
+    margin: -5px;
+  }
+  .miau {
+    background: red;
+  }
+  .parrilla {
+    text-align: center;
+  }
+  .contenedor-conocenos h3 span {
+    background: #0cd7f2;
+    color: white;
+    border-radius: 80%;
+    display: inline-block;
+    text-align: center;
+    width: 15%;
+    height: 15%;
+    padding: 2px;
+    box-shadow: black;
+    margin-right: 10px;
+  }
+  /*SABORES*/
+  .chocolate {
+    background-image: url("https://static.wixstatic.com/media/baac51_dce92e80d8174b64b0505698a8444b3d.jpg/v1/fill/w_1539,h_651,al_c,q_85,usm_0.66_1.00_0.01/baac51_dce92e80d8174b64b0505698a8444b3d.webp");
+    background-position: top center;
+    height: 500px;
+  }
+  .sabores h2,
+.lugar h2 {
+    text-transform: uppercase;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+  }
+  .sabores h3,
+.lugar h3 {
+    font-family: Yesteryear;
+    font-size: 1.9em;
+  }
+  .sabores p,
+.lugar p {
+    font-family: "Pathway Gothic One", sans-serif;
+    font-size: 1.2em;
+    margin: 2em;
+  }
+  .sabores a,
+.lactosa a,
+.lugar a,
+.eventos a {
+    padding: 0.3em 2.2em;
+    color: #484747;
+    border: 2px solid #484747;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Pathway Gothic One", sans-serif;
+    font-size: 1.6em;
+    transition: all 1s;
+    display: inline-block;
+    margin: 1em;
+  }
+  .sabores a:hover,
+.lactosa a:hover,
+.eventos a:hover,
+.lugar a:hover {
+    color: #fff;
+    background: #484747;
+    text-decoration: none;
+  }
+  /*LACTOSA*/
+  .lactosa {
+    background: url("http://pngimg.com/uploads/ice_cream/ice_cream_PNG20992.png") bottom center no-repeat, #B5E8D5;
+    background-attachment: fixed;
+    text-transform: uppercase;
+    height: 500px;
+    color: #fff;
+    padding-top: 3em;
+  }
+  .lactosa p,
+.eventos p {
+    font-size: 4em;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.5em;
+  }
+  .lactosa a,
+.eventos a {
+    color: #fff;
+    border: 2px solid #fff;
+  }
+  .lactosa a:hover {
+    background: #fff;
+    color: #484747;
+  }
+  span.helado {
+    font-size: 48px;
+  }
+  #footer-servicios {
+    position: relative;
+  }
+  .contenedor-footer-servicios {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--color-primario);
+  }
+  .contenedor-pie-servicios {
+    text-align: center;
+    color: white;
+  }
+  .contenedor-pie-servicios h4 {
+    text-align: center;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .contenedor-pie-servicios p {
+    color: rgb(215, 216, 224);
+  }
+  .Derechos-reservados-servcios {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: var(--color-primario);
+  }
+  /*FOOTER*/
+  #footer {
+    background-color: var(--color-secundario);
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+  }
+  .contenedor-footer {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--color-primario);
+  }
+  .contenedor-pie {
+    text-align: center;
+    color: white;
+  }
+  .contenedor-pie h4 {
+    text-align: center;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .contenedor-pie p {
+    color: rgb(215, 216, 224);
+  }
+  .Derechos-reservados {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: var(--color-primario);
+  }
+}/*# sourceMappingURL=estilos.css.map */
